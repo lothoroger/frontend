@@ -13,7 +13,7 @@
  
 .page-nav a {
   display: block;
-  min-width: 0rem;
+  min-width: 9rem;
   padding: 0 1.8rem;
   border-right: 1px dotted #3d3d3d;
   text-decoration: none;
