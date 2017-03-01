@@ -11,3 +11,6 @@ nav .page-nav {
   font-size: 1.7rem;
   }
   
+nav .page-nav a:first-child {
+   border-left: 1px dotted #3d3d3d;
+}
