@@ -12,7 +12,7 @@
   }
 
 
-.page-nav a {
+nav .page-nav a {
   display: block;
   min-width: 9rem;
   padding: 0 1.8rem;
