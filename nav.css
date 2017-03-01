@@ -1,5 +1,10 @@
 /* Styles for the Navigation Bar */
 
+nav .page-nav .container {
+  display: -ms -flexbox;
+  display: flexbox;
+  }
+
 nav .page-nav {
   background-color: #1d1d1d;
   line-height: 6rem;
