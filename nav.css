@@ -2,8 +2,8 @@
 
 .page-nav {
   background-color: #1d1d1d;
-  line-height: 6rem;
-  font-size: 1.7rem;
+  line-height: 6 rem;
+  font-size: 1.7 rem;
   }
  
 .page-nav .container {
@@ -14,8 +14,8 @@
 
 nav .page-nav a {
   display: block;
-  min-width: 9rem;
-  padding: 0 1.8rem;
+  min-width: 9 rem;
+  padding: 0 1.8 rem;
   border-right: 1px dotted #3d3d3d;
   text-decoration: none;
   text-transform: uppercase;
