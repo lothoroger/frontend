@@ -1,20 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <title>Roger's Front-End Project</title>
-  <link href="nav.css" rel="stylesheet" type="text/css" />
-</head>
-  
-<body>
+   <title>Roger's Front-End</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <nav class="page-nav">
-      <div class="container">
-          <a href="index.htm" class="active">Home</a>
-          <a href="about.htm">About Me</a>
-          <a href="projects.htm">Projects</a>
-          <a href="forsale.htm">For Sale</a>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   <style type=text/css">
+     
+  h1 { color: red;}
+   </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class = "nav nav-pills pull-right" >
+	<li class="active"><a href="#">Home</a></li>
+	<li><a href="about.html">About Us</a></li>
+	<li><a href="Projects.html">Projects</a></li>
+	</ul>
+        </nav>
+ 
+
+
+      <div id="col-md-6">
+	<h1>Welcome to Front-End Development Project</h1>
+	<p>The following are features I have developed for my Front-End project. You can create your webpages using Notepad but it took me a while to accomplish this project. I am trying to apply what I have learned in details.</p>
+	<div class="jumbotron" style="background: url('brlotho.jpg');background-color:#28b8f7;">
+        <h1>My Jumbotron CSS</h1>
+        <p class="lead">The Jumbotron class is used for displaying your head captions with Images.<br/>To use my Jumbotron class type <\div id='jumbotron'></p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Roger's Demo</a></p>
+      	</div>
        </div>
- </nav>
-<h1>Welcome to Roger Lotho's Website</h1>
+
+     </div>
+
+
+     <div id="col-md-3">
+		
+	      <h3>Table Stripped and Hover CSS</h3>
+	      <p>To use my Table Class just type <\ table class=table table-hover table-striped"></p>
+           		<table class="table table-hover table-striped"><tr><th>Software</th><th>Front-End</th><th>Back-End</th></tr>
+			<tr><td>ASP Web Apps</td><td>HTML5, CSS3, Javascript, JQuery</th><th>ASP.NET, C#, VBS</td></tr>
+			<tr><td>Linux Web Apps</td><td>HTML5, CSS3, Javascript, JQuery</th><th>Apache, PHP</td></tr>
+			<tr><td>NgineX Web Apps</td><td>HTML5, CSS3, Javascript, JQuery</th><th>Apache, PHP</td></tr>
+			</table>
+		
+     </div>
+ 
+    
+<footerclass="footer">
+	<p>&copy; 2017 LOTHOR</p>
+</footer>
+</div>
 </body>
+
 </html>
