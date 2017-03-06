@@ -1,0 +1,1356 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+                  	<meta charset="UTF-8">
+			<title>Highly Scalable Metrics, Monitoring, and Alerts | Librato</title>
+	<meta name="description" content="A cloud monitoring platform for real-time operations and performance analytics. Loved equally by devops, and data engineers.">
+	<base href="https://www.librato.com/">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon-blue.ico">
+	<link rel="icon" type="image/x-icon" href="images/favicon-blue.ico">
+	<link rel="canonical" href="https://www.librato.com/home" />
+	<meta property="og:url" content="https://www.librato.com/home" />
+	<meta property='og:title'       content='Highly Scalable Metrics, Monitoring, and Alerts | Librato'  />
+	<meta property='og:description' content='A cloud monitoring platform for real-time operations and performance analytics. Loved equally by devops, and data engineers.'  />
+	<meta property='og:site_name'   content='Librato Metrics'  />
+	<meta property='og:type'        content='website'  />
+
+	<!-- Social-Web -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@librato">
+	<meta name="twitter:title" content="Highly Scalable Metrics, Monitoring, and Alerts | Librato">
+	<meta name="twitter:description" content="A cloud monitoring platform for real-time operations and performance analytics. Loved equally by devops, and data engineers.">
+  <meta name="twitter:image" content="https://www.librato.com/images/social/Librato_Twitter_800x320.png">
+  
+	<!-- Social-Web-NEEDTODO PAGE URL -->
+	<meta property="og:url"                content="https://www.librato.com/" />
+	<meta property="og:type"               content="article" />
+	<meta property="og:title"              content="Highly Scalable Metrics, Monitoring, and Alerts | Librato" />
+	<meta property="og:description"        content="A cloud monitoring platform for real-time operations and performance analytics. Loved equally by devops, and data engineers." />
+
+
+	<!-- Fontware -->
+	<link href="lib/font-awsome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Arapey:400italic,400' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=IM+Fell+Double+Pica+SC|Damion' rel='stylesheet' type='text/css'>
+	<!-- jQuery and friends -->
+	<script src="lib/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/retina.js"></script>
+	<script src="js/skrollr.min.js"></script>
+	<script src="js/jquery.validate.js"></script>
+  <script src="js/jquery.url.js"></script>
+  <script src="js/packery.pkgd.min.js"></script>
+  <!-- A/B-Warez -->
+  <script src="https://cdn.optimizely.com/js/8151610878.js"></script>
+	<!-- Bootstrap -->
+		<link href="lib/bootstrap/3.3.5/css/bootstrap-desktop.min.css" rel="stylesheet">
+		<link href="lib/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" >
+	<script src="lib/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<link href="css/style-desktop1488418832.css" rel="stylesheet">
+	
+	  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-12975738-6', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- One Tag Conditional Container: Librato (9822) | OneTag (7458)-->
+  <script type="text/javascript">
+  var ft_onetag_7458 = {
+    ft_vars:{
+      "ftXRef":"",
+      "ftXValue":"",
+      "ftXType":"",
+      "ftXName":"",
+      "ftXNumItems":"",
+      "ftXCurrency":"",
+      "U1":"",
+      "U2":"",
+      "U3":"",
+      "U4":"",
+      "U5":"",
+      "U6":"",
+      "U7":"",
+      "U8":"",
+      "U9":"",
+      "U10":"",
+      "U11":"",
+      "U12":"",
+      "U13":"",
+      "U14":"",
+      "U15":"",
+      "U16":"",
+      "U17":"",
+      "U18":"",
+      "U19":"",
+      "U20":""
+      },
+    ot_dom:document.location.protocol+'//servedby.flashtalking.com',
+    ot_path:'/container/9822;71711;7458;iframe/?',
+    ot_href:'ft_referrer='+escape(document.location.href),
+    ot_rand:Math.random()*1000000,
+    ot_ref:document.referrer,
+    ot_init:function(){
+      var o=this,qs='',count=0,ns='';
+      for(var key in o.ft_vars){
+        qs+=(o.ft_vars[key]==''?'':key+'='+o.ft_vars[key]+'&');
+      }
+      count=o.ot_path.length+qs.length+o.ot_href+escape(o.ot_ref).length;
+      ns=o.ot_ns(count-2000);
+      document.write('<iframe style="position:absolute; visibility:hidden; width:1px; height:1px;" src="'+o.ot_dom+o.ot_path+qs+o.ot_href+'&ns='+ns+'&cb='+o.ot_rand+'"></iframe>');
+    },
+    ot_ns:function(diff){
+      if(diff>0){
+        var o=this,qo={},
+          sp=/(?:^|&)([^&=]*)=?([^&]*)/g,
+          fp=/^(http[s]?):\/\/?([^:\/\s]+)\/([\w\.]+[^#?\s]+)(.*)?/.exec(o.ot_ref),
+          ro={h:fp[2],p:fp[3],qs:fp[4].replace(sp,function(p1,p2,p3){if(p2)qo[p2]=[p3]})};
+        return escape(ro.h+ro.p.substring(0,10)+(qo.q?'?q='+unescape(qo.q):'?p='+unescape(qo.p)));
+      }else{
+        var o=this;
+        return escape(unescape(o.ot_ref));
+      }
+        }
+    }
+  ft_onetag_7458.ot_init();
+  </script>
+
+  <!-- Start Visual Website Optimizer Asynchronous Code -->
+  <script type='text/javascript'>
+    var _vwo_code=(function(){
+    var account_id=165443,
+    settings_tolerance=2000,
+    library_tolerance=2500,
+    use_existing_jquery=false,
+    // DO NOT EDIT BELOW THIS LINE
+    f=false,d=document;return{use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&r='+Math.random());var a=d.createElement('style'),b='body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);return settings_timer;}};}());_vwo_settings_timer=_vwo_code.init();
+  </script>
+  <!-- End Visual Website Optimizer Asynchronous Code -->
+
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5TT6NP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5TT6NP');
+  </script>
+  <!-- End Google Tag Manager -->
+
+</head>
+<body>
+<header class="header header-home">
+	<div class="navbar navbar-default navbar-static-top homenav" role="navigation">
+    <div class="container">
+	    <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar first"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a href="https://www.librato.com/"><img src="images/librato-white.svg" alt="Librato" class="logo"></a>
+
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+			<li><a href="product">product</a></li>
+			<li><a href="customers">customers</a></li>
+			<li><a href="pricing">pricing</a></li>
+			<li><a href="docs/kb/">documentation</a></li>
+			<li class="noborder"><a href="http://blog.librato.com/">blog</a></li>
+			<li class="noborder"><a href="https://metrics.librato.com/users/sign_in" class="btn btn-default btn-sign_in">sign in</a></li>
+			<li class="noborder">
+				<a href="https://metrics.librato.com/sign_up" class="btn btn-primary btn-sign_up btn-sign_up-home">try it</a>
+			</li>
+			</ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+</header>
+
+<div class="body">
+	<div id="home">
+  <div class="videoWrapper">
+    <video src="https://player.vimeo.com/external/131026333.hd.mp4?s=4b3032d8bbad938ab046309dc75f0fda&profile_id=113" loop autoplay></video>
+  </div>
+  <div class="cityscape">
+    <div class="container">
+      <div class="cityscape-img">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 997 355"><path d="m0 264.16h7v90.84h-7z"/><path d="m10 188.86h7v166.14h-7z"/><path d="m20 188.86h7v166.14h-7z"/><path d="m30 188.86h7v166.14h-7z"/><path d="m40 239.06h7v115.94h-7z"/><path d="m50 239.06h7v115.94h-7z"/><path d="m60 219.93h7v135.07h-7z"/><path d="m70 227.1h7v127.9h-7z"/><path d="m80 191.25h7v163.75h-7z"/><path d="m90 191.25h7v163.75h-7z"/><path d="m100 191.25h7v163.75h-7z"/><path d="m110 222.32h7v132.68h-7z"/><path d="m120 172.12h7v182.88h-7z"/><path d="m130 172.12h7v182.88h-7z"/><path d="m140 229.49h7v125.51h-7z"/><path d="m150 239.06h7v115.94h-7z"/><path d="m160 199.61h7v155.39h-7z"/><path d="m170 199.61h7v155.39h-7z"/><path d="m180 216.35h7v138.65h-7z"/><path d="m190 216.35h7v138.65h-7z"/><path d="m200 236.67h7v118.33h-7z"/><path d="m210 174.51h7v180.49h-7z"/><path d="m220 174.51h7v180.49h-7z"/><path d="m230 174.51h7v180.49h-7z"/><path d="m240 241.45h7v113.55h-7z"/><path d="m250 229.49h7v125.51h-7z"/><path d="m270 168.54h7v186.46h-7z"/><path d="m260 168.54h7v186.46h-7z"/><path d="m280 168.54h7v186.46h-7z"/><path d="m290 168.54h7v186.46h-7z"/><path d="m300 212.76h7v142.24h-7z"/><path d="m310 172.12h7v182.88h-7z"/><path d="m320 216.35h7v138.65h-7z"/><path d="m330 114.75h7v240.25h-7z"/><path d="m340 114.75h7v240.25h-7z"/><path d="m350 114.75h7v240.25h-7z"/><path d="m360 121.92h7v233.08h-7z"/><path d="m370 121.92h7v233.08h-7z"/><path d="m380 121.92h7v233.08h-7z"/><path d="m390 121.92h7v233.08h-7z"/><path d="m400 121.92h7v233.08h-7z"/><path d="m410 121.92h7v233.08h-7z"/><path d="m420 241.45h7v113.55h-7z"/><path d="m430 141.04h7v213.96h-7z"/><path d="m440 264.16h7v90.84h-7z"/><path d="m450 212.76h7v142.24h-7z"/><path d="m460 127.9h7v227.1h-7z"/><path d="m470 124.31h7v230.69h-7z"/><path d="m480 89.65h7v265.35h-7z"/><path d="m490 89.65h7v265.35h-7z"/><path d="m500 124.31h7v230.69h-7z"/><path d="m510 127.9h7v227.1h-7z"/><path d="m520 80.08h7v274.92h-7z"/><path d="m530 0h7v355h-7z"/><path d="m540 80.08h7v274.92h-7z"/><path d="m550 219.93h7v135.07h-7z"/><path d="m560 241.45h7v113.55h-7z"/><path d="m570 138.65h7v216.35h-7z"/><path d="m580 138.65h7v216.35h-7z"/><path d="m590 138.65h7v216.35h-7z"/><path d="m600 138.65h7v216.35h-7z"/><path d="m610 222.32h7v132.68h-7z"/><path d="m620 168.54h7v186.46h-7z"/><path d="m630 168.54h7v186.46h-7z"/><path d="m640 168.54h7v186.46h-7z"/><path d="m650 10.758h7v344.24h-7z"/><path d="m660 0h7v355h-7z"/><path d="m670 0h7v355h-7z"/><path d="m680 0h7v355h-7z"/><path d="m690 0h7v355h-7z"/><path d="m700 10.758h7v344.24h-7z"/><path d="m710 168.54h7v186.46h-7z"/><path d="m720 168.54h7v186.46h-7z"/><path d="m730 202h7v153h-7z"/><path d="m740 141.04h7v213.96h-7z"/><path d="m750 145.82h7v209.18h-7z"/><path d="m760 145.82h7v209.18h-7z"/><path d="m770 141.04h7v213.96h-7z"/><path d="m780 216.35h7v138.65h-7z"/><path d="m790 197.22h7v157.78h-7z"/><path d="m800 234.28h7v120.72h-7z"/><path d="m810 241.45h7v113.55h-7z"/><path d="m820 192.44h7v162.56h-7z"/><path d="m830 153h7v202h-7z"/><path d="m840 153h7v202h-7z"/><path d="m860 174.51h7v180.49h-7z"/><path d="m880 174.51h7v180.49h-7z"/><path d="m850 174.51h7v180.49h-7z"/><path d="m870 174.51h7v180.49h-7z"/><path d="m890 216.35h7v138.65h-7z"/><path d="m900 216.35h7v138.65h-7z"/><path d="m910 178.1h7v176.9h-7z"/><path d="m920 247.42h7v107.58h-7z"/><path d="m930 192.44h7v162.56h-7z"/><path d="m940 119.53h7v235.47h-7z"/><path d="m950 127.9h7v227.1h-7z"/><path d="m960 127.9h7v227.1h-7z"/><path d="m970 119.53h7v235.47h-7z"/><path d="m980 164.95h7v190.05h-7z"/><path d="m990 164.95h7v190.05h-7z"/></svg>
+      </div>
+    </div>
+  </div>
+  <div class="home-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center title">
+          <h1>Real-Time Cloud Monitoring</h1>
+          <p>Transform your monitoring data into valuable insight at any layer of the stack.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center underform">
+          <a href="https://metrics.librato.com/s/public/r623c3itn?duration=43200&intercom=true" target="_blank" class="btn btn-lg btn-default btn-see-live-demo">See a Live Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="section110  collectors">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>Go From Zero to Full-Stack Monitoring in Minutes</h2>
+          <p class="into_p">With just a few clicks, gain visibility across the container and operating system, through the web and application infrastructure, to your application itself.
+            <div id="integrationWall" class="row">
+              <div class="grid">
+                <div class="one-by-one tile apache">
+                  <a href="/web-server-monitoring/apache">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Apache" title="Apache" src="/images/integrations/logos/logo-apache.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Apache
+                          </div>
+                          <p>
+                            Apache monitoring and metrics powered by the Librato Agent.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="tile one-by-two aws">
+                  <a href="/cloudwatch">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="AWS" title="AWS" src="/images/integrations/logos/logo-cloudwatch.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            AWS
+                          </div>
+                          <p>
+                            Continuous monitoring for all of your AWS services. Yearly retention, pre-built dashboards.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="tile one-by-one aws-linux">
+                  <a href="/server-monitoring">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="AWS Linux" title="AWS Linux" src="/images/integrations/logos/logo-amazonlinux.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            AWS Linux
+                          </div>
+                          <p>
+                            Monitor your Amazon Linux host and service metrics with the Librato Agent.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="tile one-by-one big-panda">
+                  <a href="/docs/kb/alert/service_integrations/bigpanda.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img class="square" alt="BigPanda" title="BigPanda" src="/images/integrations/logos/logo-bigpanda.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            BigPanda
+                          </div>
+                          <p>
+                            Receive Alerts as BigPanda Incidents and correlate with what’s going on in the rest of your system.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile campfire">
+                  <a href="/docs/kb/alert/service_integrations/campfire.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Campfire" title="Campfire" src="/images/integrations/logos/logo-campfire.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Campfire
+                          </div>
+                          <p>
+                            Receive Alerts and Chart Snapshots in your Campfire rooms.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="tile one-by-one centos">
+                  <a href="/docs/kb/collect/integrations/agent/index.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Centos" title="Centos" src="/images/integrations/logos/logo-centos.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            CentOS
+                          </div>
+                          <p>
+                            Monitor your CentOS host and service metrics with the Librato Agent.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="tile one-by-one cherry-py">
+                  <a href="/application-monitoring/cherrypy">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="CherryPy" title="CherryPy" src="/images/integrations/logos/logo-cherrypy.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            CherryPy
+                          </div>
+                          <p>
+                            With zero modifications to your application code, monitor your web application’s health & performance.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-two tile collectd">
+                  <a href="/docs/kb/collect/integrations/collectd/index.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img class="square" alt="Collectd" title="Collectd" src="/images/integrations/logos/logo-collectd.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                             Collectd
+                          </div>
+                          <p>
+                           Get system metrics like CPU, Load, Disk and Network I/O for all of your hosts.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile debian">
+                 <a href="/docs/kb/collect/integrations/agent/index.html">
+                   <div class="integration-card">
+                     <div class="card-content">
+                       <img alt="Debian" title="Debian" src="/images/integrations/logos/logo-debian.svg" />
+                     </div>
+                     <div class="hover-content">
+                       <div class="bg-color"></div>
+                       <div class="hover-copy">
+                         <div class="title">Debian</div>
+                         <p>Monitor your Debian host and service metrics with the Librato Agent.</p>
+                       </div>
+                       <button class="learn-more-btn btn btn-default">Learn More</button>
+                     </div>
+                    </div>
+                 </a>
+                </div>
+                <div class="one-by-one tile django">
+                  <a href="/application-monitoring/django">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img class="fat-rectangle" alt="Django" title="Django" src="/images/integrations/logos/logo-django.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Django
+                          </div>
+                          <p>
+                            Monitor your web application’s health & performance in a matter of minutes.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile email">
+                  <a href="/docs/kb/alert/service_integrations/email.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img class="square" alt="Email" title="Email" src="/images/integrations/logos/logo-email.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Email
+                          </div>
+                          <p>
+                            Stay on top of of all your alerts via customized emails.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-two tile docker">
+                  <a href="/server-monitoring/docker">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Docker" title="Docker" src="/images/integrations/logos/logo-docker.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Docker
+                          </div>
+                          <p>
+                            Inspect your Docker container metrics with the Librato Agent.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile flask">
+                  <div class="integration-card">
+                    <div class="card-content">
+                      <img class="fat-rectangle" alt="Flask" title="Flask" src="/images/integrations/logos/logo-flask.svg" />
+                    </div>
+                    <div class="hover-content">
+                      <a href="/application-monitoring/flask">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Flask
+                          </div>
+                          <p>
+                            Monitor the performance of your web application with zero modifications to your application code.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile gunicorn">
+                  <a href="/application-monitoring/gunicorn">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Gunicorn" title="Gunicorn" src="/images/integrations/logos/logo-gunicorn.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Gunicorn
+                          </div>
+                          <p>
+                            Monitor the health & performance metrics related to your WSGI server.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile ha-proxy">
+                  <a href="/application-monitoring/HAProxy">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="HAProxy" title="HAProxy" src="/images/integrations/logos/logo-haproxy.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            HAProxy
+                          </div>
+                          <p>
+                            Be in the know whenever your infrastructure shows signs of trouble.  Simple set up with big results.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="tile one-by-two heroku">
+                  <a href="/heroku">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Heroku" title="Heroku" src="/images/integrations/logos/logo-heroku.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Heroku
+                          </div>
+                          <p>
+                            Monitor your app alongside the rest of your Librato metrics using our custom log drain.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile hipchat">
+                  <a href="/docs/kb/alert/service_integrations/hipchat.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="HipChat" title="HipChat" src="/images/integrations/logos/logo-hipchat.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            HipChat
+                          </div>
+                          <p>
+                            Receive Alerts and Chart Snapshots in your Hipchat rooms.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-two tile librato-agent">
+                  <a href="/server-monitoring/librato-agent">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img class="square" alt="Librato Agent" title="Librato Agent" src="/images/integrations/logos/logo-server-monitoring.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Librato Agent
+                          </div>
+                          <p>
+                            Best-in-class monitoring. A prerequisite for our Docker, Redis, NGINX, and Memcached integrations.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile memcached">
+                  <a href="/database-monitoring/memcached">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Memcached" title="Memcached" src="/images/integrations/logos/logo-memcached.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Memcached
+                          </div>
+                          <p>
+                            Monitor your Amazon Linux host and service metrics with the Librato Agent.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile mongo-db">
+                  <a href="/database-monitoring/mongodb">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="MongoDB" title="MongoDB" src="/images/integrations/logos/logo-mongodb.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            MongoDB
+                          </div>
+                          <p>
+                            Metrics to assist you with the state of your database.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile neptune-io">
+                  <a href="/docs/kb/alert/service_integrations/neptune.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Neptune-io" title="Neptune.io" src="/images/integrations/logos/logo-neptune.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Neptune.io
+                          </div>
+                          <p>
+                            Monitor your Amazon Linux host and service metrics with the Librato Agent.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile nginx">
+                  <a href="/web-server-monitoring/nginx">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="NGINX" title="NGINX" src="/images/integrations/logos/logo-nginx.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            NGINX
+                          </div>
+                          <p>
+                            NGINX web server monitoring at your fingertips with our Librato Agent plugin.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile nginx-plus">
+                  <a href="/web-server-monitoring/nginx-plus">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="NGINX+" title="NGINX+" src="/images/integrations/logos/logo-nginx_plus.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            NGINX+
+                          </div>
+                          <p>
+                            NGINX Plus commercial web server health and performance monitoring thanks to our Librato Agent.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile opsgenie">
+                  <a href="/docs/kb/alert/service_integrations/opsgenie.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="OpsGenie" title="OpsGenie" src="/images/integrations/logos/logo-opsgenie.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            OpsGenie
+                          </div>
+                          <p>
+                            Receive Alerts in your Opsgenie feed.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile pager-duty">
+                  <a href="/docs/kb/alert/service_integrations/pagerduty.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="PagerDuty" title="PagerDuty" src="/images/integrations/logos/logo-pagerduty.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            PagerDuty
+                          </div>
+                          <p>
+                            Receive Alerts as PagerDuty Incidents.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-two tile rails">
+                  <a href="/application-monitoring/rails">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img  class="fat-rectangle" alt="Rails" title="Rails" src="/images/integrations/logos/logo-rails.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Rails
+                          </div>
+                          <p>
+                            Performance insight for your Ruby on Rails application stack.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="tile one-by-two redis">
+                  <a href="/database-monitoring/redis">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Redis" title="Redis" src="/images/integrations/logos/logo-redis.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Redis
+                          </div>
+                          <p>
+                            Monitor the health and performance of your Redis servers with our Librato Agent plugin.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile flowdock">
+                  <a href="/docs/kb/alert/service_integrations/flowdock.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Flow" title="Flow" src="/images/integrations/logos/logo-flowdock.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Rally FlowDock
+                          </div>
+                          <p>
+                            Send alert messages and snapshots to a Flow.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile redhat">
+                  <a href="/docs/kb/collect/integrations/agent/index.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Red Hat" title="Red Hat" src="/images/integrations/logos/logo-redhat.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Red Hat
+                          </div>
+                          <p>
+                            Monitor your Amazon Linux host and service metrics with the Librato Agent.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="tile one-by-one slack">
+                  <a href="/docs/kb/alert/service_integrations/slack.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Slack" title="Slack" src="/images/integrations/logos/logo-slack.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Slack
+                          </div>
+                          <p>
+                            Receive Alerts and Chart Snapshots in your Slack channels.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-two tile statsd">
+                  <a href="/docs/kb/collect/collection_agents/stastd.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img class="fat-rectangle" alt="StatsD" title="StatsD" src="/images/integrations/logos/logo-statsd.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            StatsD
+                          </div>
+                          <p>
+                            StatsD server setup not required. Simple set up to gather all your StatsD data.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile ubuntu">
+                  <a href="/docs/kb/collect/integrations/agent/index.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img alt="Ubuntu" title="Ubuntu" src="/images/integrations/logos/logo-ubuntu.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Ubuntu
+                          </div>
+                          <p>
+                            Monitor your Ubuntu host and service metrics with the Librato Agent.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile victorops">
+                  <a href="/docs/kb/alert/service_integrations/victorops.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img class="square" alt="VictorOps" title="VictorOps" src="/images/integrations/logos/logo-victorops.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            VictorOps
+                          </div>
+                          <p>
+                            Receive Alerts in VictorOps for routing based on your Incident Routing rules.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile webhook">
+                  <a href="/docs/kb/alert/service_integrations/webhook.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img class="square" alt="Webhook" title="Webhook" src="/images/integrations/logos/logo-webhooks.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Webhook
+                          </div>
+                          <p>
+                            Monitor your Amazon Linux host and service metrics with the Librato Agent.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile zapier">
+                  <a href="/docs/kb/alert/service_integrations/zapier.html">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img class="fat-rectangle" alt="Zapier" title="Zapier" src="/images/integrations/logos/logo-zapier.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            Zapier
+                          </div>
+                          <p>
+                            Send Alerts to a Zapier webhook and route them with Zapier magic.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="one-by-one tile zookeeper">
+                  <a href="/application-monitoring/zookeeper">
+                    <div class="integration-card">
+                      <div class="card-content">
+                        <img class="square" alt="ZooKeeper" title="ZooKeeper" src="/images/integrations/logos/logo-zookeeper.svg" />
+                      </div>
+                      <div class="hover-content">
+                        <div class="bg-color"></div>
+                        <div class="hover-copy">
+                          <div class="title">
+                            ZooKeeper
+                          </div>
+                          <p>
+                            Monitor ZooKeeper health & performance metrics with Librato Agent.
+                          </p>
+                        </div>
+                        <button class="learn-more-btn btn btn-default">Learn More</button>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-intro">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h1>The Art and Science of Real-Time Monitoring</h1>
+			</div>
+		</div>
+	</div>
+	<div class="container product-intro-full">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row no-gutters">
+					<div class="col-sm-3">
+						<div class="product-intro-box box-data-collection">
+							<img src="images/products/pinfo1.svg" alt="" title="" class="img-responsive" />
+							<h3>
+								<a href="product#data-collection">Collect</a>
+							</h3>
+							<p>Gather metrics from AWS, Heroku, or your own favorite sources.</p>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="product-intro-box box-data-processing">
+							<img src="images/products/pinfo2.svg" alt="" title="" class="img-responsive" />
+							<h3>
+								<a href="product#data-processing">Correlate</a>
+							</h3>
+							<p>Aggregate and transform your metrics with our functional DSL.</p>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="product-intro-box box-visual-insights">
+							<img src="images/products/pinfo3.svg" alt="" title="" class="img-responsive" />
+							<h3>
+								<a href="product#visual-insights">Visualize</a>
+							</h3>
+							<p>Compare metrics and overlay events in beautiful dashboards.</p>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="product-intro-box box-alerting">
+							<img src="images/products/pinfo4.svg" alt="" title="" class="img-responsive" />
+							<h3>
+								<a href="product#versatile-alerting">Alert</a>
+							</h3>
+							<p>Customize your rules and escalate using your existing tools.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row l-margin-top-3">
+			<div class="col-md-12 text-center">
+				<a href="https://metrics.librato.com/s/public/r623c3itn?duration=43200&intercom=true" target="_blank" class="btn btn-default btn-see-live-demo">See a Live Dashboard</a>
+				<a href="product" class="btn btn-default btn-see-live-demo">Learn More</a>
+			</div>
+		</div>
+	</div>
+	<div class="container product-intro-brief">
+		<div class="row">
+			<div class="col-md-12">
+				<img src="images/products/visualize-small.svg" alt="" title="" class="img-responsive" />
+			</div>
+		</div>
+	</div>
+</div>
+
+
+    <div class="testimonials">
+      <div class="hero">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <div class="tbox tbox1">
+              <img src="images/home/tyler.jpg" alt="Tyler Murray" title="" class="circle x2"/>
+              <h3>“Librato is plug and play, and about as sane as you can get with implementing a metrics monitoring system.”</h3>
+              <p>Tyler Murry, Senior Engineering Manager</p>
+              <img class="logo" src="images/home/moz-grey.svg" width=147 alt="Moz" title="Moz" />
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="tbox tbox2">
+              <img src="images/home/seth_rival.jpg" alt="Seth Pollack" title="Seth Pollack" class="circle x2"/>
+              <h3>“If speed and agility are most important and you need immediate insights with little overhead then Librato is the perfect choice.”</h3>
+              <P>Seth Pollack, Rival IQ Co-founder</P>
+              <img class="logo" src="images/home/rivaliq-logo-grayscale.svg" width=90  alt="RivalIQ" title="RivalIQ" />
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="tbox tbox3">
+              <img src="images/home/scott.png" alt="Scott Turnquest" title="" class="circle x2" />
+              <h3>“Librato is one of the most important live dashboards that we have running in our team room.”</h3>
+              <P>Scott Turnquest, Application Dev</P>
+              <img class="logo" src="images/home/testi-thoughworks.svg" width=150  alt="Thoughtworks" title="Thoughtworks" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="partners">
+      <div class="container">
+        <div class="row">
+          <ul class="home-partners">
+            <li><img src="images/home/logo-airbnb.svg" alt="Airbnb" class="logo-airbnb" /></li>
+            <li><img src="images/home/logo-stitch-fix.svg" alt="Stitch Fix" class="logo-stitch-fix" /></li>
+            <li><img src="images/home/logo-moz.svg" alt="Moz" class="logo-moz" /></li>
+            <li><img src="images/home/logo-mashable.svg" alt="Mashable" class="logo-mashable" /></li>
+            <li><img src="images/home/logo-heroku.svg" alt="Heroku" class="logo-heroku"/></li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center ">
+            <a href="customers" class="btn btn-primary ">See More Customers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section110home section110 bg-grey1 pricing">
+      <div class="container text-center">
+        <h2>Pricing</h2>
+        <p class="into_p">You can measure infinite metrics with Librato.
+          <br>Here are a few of our most popular configurations</p>
+          		<div class="row pricing-boxes">
+			<div class="col-md-4 box">
+				<div class="head white-text"><h3>Server Monitoring<br>with Librato Agent</h3></div>
+				<p><strong>Starting under <br>$10 per server</strong><br />Based on a server collecting<br /> 98 server metrics</p>
+				<div class="foot">Cost per server per month<br /><br /></div>
+			</div>
+			<div class="col-md-4 box">
+				<div class="head white-text"><h3>AWS Cloudwatch Integration</h3></div>
+				<table>
+					<tr>
+						<td><strong>$0.50</strong><br />EBS</td>
+						<td><strong>$1.00</strong><br />EC2</td>
+					</tr>
+					<tr>
+						<td><strong>$1.30</strong><br />ELB</td>
+						<td><strong>$1.40</strong><br />RDS</td>
+					</tr>
+					</table>
+
+				<div class="foot">Cost per instance per month<br />Resolution: 60 seconds</div>
+			</div>
+			<div class="col-md-4 box">
+				<div class="head white-text"><h3>StatsD Backend Application Metrics</h3></div>
+				<p><strong>$5.00</strong><br />50 gauge / counter metrics</p>
+				<p><strong>$2.00</strong><br />10 timer metrics (with 1 percentile)</p>
+				<div class="foot">Cost per instance per month<br />Resolution: 60 seconds</div>
+			</div>
+		</div>
+
+          <div class="row">
+            <div class="col-md-12 text-center price-button-area">
+              <a href="pricing" class="btn btn-default">Learn More About Pricing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--<div class="above-footer2 white-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="start">Start using Librato now. <span>Full-featured and free for 30 days.</span>
+          Pricing starts at $5 per month.
+        </div>
+        <form class="form-inline" method="post"  action="https://metrics.librato.com/sign_up?section=home" accept-charset="UTF-8">
+              <input class="dummy-field" type="email" name="email" />
+          <div class="form-group">
+            <label class="sr-only" for="footerEmail">Your email</label>
+            <input type="email" class="form-control" id="footerEmail" name="user[email]" placeholder="Your email" />
+          </div>
+          <div class="form-group"  >
+            <label class="sr-only" for="footerPassword">Create password</label>
+            <input type="password" class="form-control" id="footerPassword" name="user[password]" placeholder="Create password" />
+          </div>
+          <div class="form-group"  >
+            <button name="submit" type="submit" class="btn btn-default">Sign Me Up</button>
+          </div>
+          <small class="legal">
+            <span class="legal-copy">
+            I accept the
+            <a href="https://metrics.librato.com/terms" target="_blank">Terms of Service</a>,
+            <a href="https://metrics.librato.com/privacy" target="_blank">Privacy Policy</a>
+            and occasional emails from Librato.
+            </span>
+            <span class="questions">Got questions? <a class="intercom" href="#">Talk to us.</a></span>
+          </small>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+    </div>
+
+    <!-- This hidden link connects the site to Google+ -->
+    <a href="https://plus.google.com/+Librato" rel="publisher"></a>
+
+    <script>
+
+    $(".product-intro-box").click(function() {
+      window.location.href = $(this).find("a").first().attr("href");
+      return false;
+    });
+
+    $('.cityscape-img rect').hover(
+      function()
+      {
+        $('.cityscape-img rect').each(function()
+        {
+          $(this).removeAttr("class");
+        });
+        $(this).attr("class", "active");
+      },
+      function ()
+      {
+      });
+
+      $('.collectors table td').click(function(e) {
+        var $link = $(this).find('a');
+        var url = $link.attr("href");
+
+        if (url.match(/^http/))
+        window.open(url, '_blank');
+        else
+        window.location = 'https://www.librato.com/' + url;
+
+        return false;
+      });
+
+      // Make sure the page is ready
+      $(function() {
+        $('#integrationWall .grid').packery({
+          itemSelector: '.tile',
+          gutter: 4
+        })
+        //  $('#heroEmail').keydown(function(event){
+        //    if(event.keyCode==13){
+        //      event.preventDefault();
+        //      $('#heroNextStep').trigger('click');
+        //    }
+        //  });
+        $("#heroPassword").on('keypress', function(e){
+          if($("#heroEmail").val() != ''){
+            $(".legal").animate({opacity:0.8}, 800);
+          }
+        });
+
+        //	$('#heroNextStep').on('click', function(e) {
+        //		e.stopPropagation();
+        //		if($('#heroEmail').val() !== '') {
+        //			$('#heroNextStep, #heroSubmit, #heroEmail, #heroPassword, .legal', '#heroForm').toggleClass('l-hidden');
+        //			setTimeout(function() { $('#heroPassword').focus() }, 500);
+        //		}
+        //	})
+
+        // Video Controls
+        var v = document.getElementsByTagName("video")[0];
+        v.addEventListener("canplay", function() {
+          $v = $("video");
+          if ($(".videoWrapper").is(":visible")) {
+            $v[0].play();
+            $v.animate({opacity: 0.8}, 1700).parent();
+          }
+        });
+      });
+
+      //$('.collectors table td a').click(function(e) {
+      //	});
+
+      </script>
+
+      </div>
+<a name="footer-trial"></a>
+
+<div class="above-footer2 white-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="start">Start using Librato now. <span>Full-featured and free for 30 days.</span>
+          Pricing starts at $5 per month.
+        </div>
+        <form class="form-inline" method="post"  action="https://metrics.librato.com/sign_up?section=home" accept-charset="UTF-8">
+              <input class="dummy-field" type="email" name="email" />
+          <div class="form-group">
+            <label class="sr-only" for="footerEmail">Your email</label>
+            <input type="email" class="form-control" id="footerEmail" name="user[email]" placeholder="Your email" />
+          </div>
+          <div class="form-group"  >
+            <label class="sr-only" for="footerPassword">Create password</label>
+            <input type="password" class="form-control" id="footerPassword" name="user[password]" placeholder="Create password" />
+          </div>
+          <div class="form-group"  >
+            <button name="submit" type="submit" class="btn btn-default">Sign Me Up</button>
+          </div>
+          <small class="legal">
+            <span class="legal-copy">
+            I accept the
+            <a href="https://metrics.librato.com/terms" target="_blank">Terms of Service</a>,
+            <a href="https://metrics.librato.com/privacy" target="_blank">Privacy Policy</a>
+            and occasional emails from Librato.
+            </span>
+            <span class="questions">Got questions? <a class="intercom" href="#">Talk to us.</a></span>
+          </small>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<ul>
+					<li>COMPANY</li>
+					<li><a href="about">About</a></li>
+					<li><a href="jobs">Jobs</a></li>
+				</ul>
+			</div>
+			<div class="col-md-2">
+				<ul>
+					<li>CONTACT</li>
+					<li><a class="intercom" href="#">Live Chat</a></li>
+					<li><a href="https://www.librato.com/docs/kb/" target="_blank">Support</a></li>
+					<li><a href="mailto:support@librato.com">Email</a></li>
+				</ul>
+			</div>
+			<div class="col-md-2">
+				<ul>
+					<li>CONNECT</li>
+					<li><a href="https://twitter.com/Librato" target="_blank">Twitter</a></li>
+					<li><a href="https://vimeo.com/librato" target="_blank">Vimeo</a></li>
+					<li><a href="https://linkedin.com/company/373662" target="_blank">LinkedIn</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row last-row">
+			<div class="col-md-2 footer-logo">
+					<a href="home"><img src="images/librato-white.svg" alt="Librato" class="logo"></a>
+			</div>
+			<div class="col-md-10 footer-links text-right">
+				<a href="terms">Terms of Use</a>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="website-terms">Website Terms</a>
+				&nbsp;&nbsp;|&nbsp;&nbsp;
+				<span>
+					<a href="http://www.solarwinds.com/trademarks.aspx" target=_blank>Trademark List</a>
+					&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="privacy">Privacy Policy</a>
+					&nbsp;&nbsp;|&nbsp;&nbsp;
+					<a href="security">Security Policy</a>
+				</span>
+				<p>&#169; 2017 Librato, Inc. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="js/site.js"></script>
+
+<script type="text/javascript">
+  // Intercom Config
+  // Script tag is loaded via Google Tag Manager
+  window.intercomSettings = {
+    app_id: 'i5t8536a',
+    widget: {
+      'activator': '.intercom'
+    }
+  };
+</script>
+
+</body>
+</html>
